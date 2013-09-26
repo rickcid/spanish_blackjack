@@ -1,0 +1,12 @@
+<h2 class="white_text">Te sientes suertudo <%= session[:player_name] %>? Haz tu apuesta para esta ronda.</h2>
+<h3 class="text-warning">Tienes $<%= session[:player_pot].to_i %> dispuestos para apostar.</h3>
+
+<form action='/bet' method='post'>
+  <input type="text" name="bet_amount" />
+  <br/>
+  <input type="submit" value="Apuesta" class="btn" />
+</form>
+
+<div class="row text-center">
+  <img src="/images/logo/blackjacklogo2.jpg" class="img-rounded">
+</div>
