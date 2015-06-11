@@ -1,8 +1,10 @@
 require 'rubygems'
 require 'sinatra'
 
+use Rack::Session::Cookie, :key => 'rack.session',
+                           :path => '/',
+                           :secret => 'abracadabra' 
 
-set :sessions, true
 
 BLACKJACK_AMOUNT = 21
 DEALER_MIN_HIT = 17
